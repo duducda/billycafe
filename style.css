@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(175, 127, 102);
+}
+
+#conteudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 7%;
+}
+
+#cart{
+    background-color:rgb(186, 164, 160)
+}
+
+header{
+	width: 100%; /*Sempre preencher toda largura da página */
+	background-color:rgb(128, 80, 63);
+	text-align:start;
+    font-family: Georgia;
+    margin-left:0px;
+    margin-right:0px;
+    color: black;
+    height:15%;
+    padding-bottom: 15px;
+}
+
+
+#menu {
+    display: flex;
+	width: 20%;
+    height: 30%;
+    flex-direction: row;
+    background-color:rgb(128, 80, 63)s;
+    justify-content: flex-start;
+    margin-left: 0px;
+    margin-left: 0px;
+}
+
+#botao{
+    margin:3%
+}
+
+
+#formlogin{
+    margin-top: 20px;
+    display: flex;
+	width: 25%;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color:rgb(186, 164, 160) ;
+    border-radius: 10px;
+
+}#formcadastro{
+    margin-top: 20px;
+    display: flex;
+	width: 40%;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color:rgb(186, 164, 160) ;
+    border-radius: 10px;
+}
