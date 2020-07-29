@@ -18,7 +18,7 @@ body{
 header{
 	width: 100%; /*Sempre preencher toda largura da página */
 	background-color:rgb(128, 80, 63);
-	text-align:start;
+	text-align:center;
     font-family: Georgia;
     margin-left:0px;
     margin-right:0px;
@@ -28,15 +28,24 @@ header{
 }
 
 
-#menu {
+#menuloja {
     display: flex;
 	width: 20%;
     height: 30%;
     flex-direction: row;
-    background-color:rgb(128, 80, 63)s;
+    background-color:rgb(128, 80, 63);
     justify-content: flex-start;
     margin-left: 0px;
-    margin-left: 0px;
+}
+
+#menulogin {
+    display: flex;
+	width: 20%;
+    height: 30%;
+    flex-direction: row;
+    background-color:rgb(128, 80, 63); 
+    justify-content: flex-end;
+    margin-right: 0px;
 }
 
 #botao{
@@ -50,15 +59,15 @@ header{
 	width: 25%;
     justify-content: space-between;
     flex-direction: column;
-    background-color:rgb(186, 164, 160) ;
+    background-color:rgb(186, 164, 160);
     border-radius: 10px;
-
-}#formcadastro{
+}
+#formcadastro{
     margin-top: 20px;
     display: flex;
 	width: 40%;
     justify-content: space-between;
     flex-direction: column;
-    background-color:rgb(186, 164, 160) ;
+    background-color:rgb(186, 164, 160);
     border-radius: 10px;
 }

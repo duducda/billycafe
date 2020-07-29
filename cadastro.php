@@ -10,32 +10,44 @@
     <body>
         <?php include 'header.php'; ?>
 
-        <div class = 'container' id = "formlogin">
+        <div class = 'container' id = "formcadastro">
             <center>
-                <h1>Faça seu cadastro</h1>
-                <form action="/action_page.php">
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" placeholder="Insira seu nome completo" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="usuario">Usuário:</label>
-                        <input type="text" class="form-control" placeholder="Insira seu nome de usuário" name="usuario" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="senha">Senha:</label>
-                        <input type="password" class="form-control" placeholder="Insira uma senha" name="senha" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">CEP</label>
-                        <input type="text" class="form-control" placeholder="Digite seu CEP" name="cep" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Endereço</label>
-                        <input type="text" class="form-control" placeholder="Digite seu endereço" name="endereco" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                </form> 
+                <h2>Faça seu cadastro</h2>
+                <form method="POST" action="novocliente.php">
+                    <div class="container">
+                        <div style="display: flex; justify-content: space-between">
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control form-control-sm" name = "nome" >
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="text" class="form-control form-control-sm" name = "email">
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <div class="form-group">
+                                <label for="usuario">Usuário:</label>
+                                <input type="text" class="form-control form-control-sm" name = "usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="senha">Senha:</label>
+                                <input type="password" class="form-control form-control-sm" name = "senha">
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <div class="form-group">
+                                <label for="cep">CEP:</label>
+                                <input type="text" class="form-control form-control-sm" name = "cep">
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco">Endereço::</label>
+                                <input type="text" class="form-control form-control-sm" name = "endereco">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-light">Cadastrar</button>
+                    <div> 
+                </form>
             </center>
         </div>
     </body>

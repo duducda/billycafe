@@ -12,13 +12,16 @@
 
         <div class = 'container' id = "formlogin">
             <center>
-                <h1>Faça seu login</h1>
+                <h2>Faça seu login</h2>
                 <form action="/action_page.php">
-                        <label for="usuario">Usuário:</label>
-                        <input type="text" class="form-control" placeholder="Usuário" name="usuario" required>
-                        <label for="senha">Senha:</label>
-                        <input type="password" class="form-control" placeholder="Senha" name="senha" required>
-                    <button type="submit" class="btn btn-primary" style = "margin-top: 1">Entrar</button>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" class="form-control" placeholder="Usuário" name="usuario" required>
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" placeholder="Senha" name="senha" required>
+                <button type="submit" class="btn btn-light" style = "margin-top: 6px">Entrar</button>
+                <div class="container">
+                    <span class="psw">Não possui um <a href="cadastro.php">cadastro?</a></span>
+                </div>
                 </form> 
             </center>
         </div>
@@ -29,3 +32,5 @@
 
 
 </HTML>
+
+

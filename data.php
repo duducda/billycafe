@@ -1,6 +1,6 @@
 <?php 
 
-$connect = new PDO("mysql:host=localhost;dbname=BILLY", "root", "");
+$connect = new PDO("mysql:host=localhost;dbname=billy", "root", "");
 
 $message = '';
 

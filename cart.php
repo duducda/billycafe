@@ -18,15 +18,14 @@
             <div class="table-responsive">
                <?php echo $message; ?>
             <div align="right">
-            <a href="cart.php?action=clear"><b>Clear Cart</b></a>
+            <a href="cart.php?action=clear"><b>Esvaziar carrinho</b></a>
          </div>
          <table id ="cart" class="table table-bordered">
             <tr>
-               <th width="40%">Item Name</th>
-               <th width="10%">Quantity</th>
-               <th width="20%">Price</th>
+               <th width="40%">Item</th>
+               <th width="10%">Quantidade</th>
+               <th width="20%">Preço</th>
                <th width="15%">Total</th>
-               <th width="5%">Action</th>
             </tr>
             <?php
                if(isset($_COOKIE["shopping_cart"]))
@@ -42,7 +41,7 @@
                      <td><?php echo $values["item_quantity"]; ?></td>
                      <td>$ <?php echo $values["item_price"]; ?></td>
                      <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
-                     <td><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                     <td><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remover</span></a></td>
                   </tr>
                   <?php 
                      $total = $total + ($values["item_quantity"] * $values["item_price"]);
