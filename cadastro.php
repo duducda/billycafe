@@ -13,7 +13,7 @@
         <div class = 'container' id = "formcadastro">
             <center>
                 <h2>Faça seu cadastro</h2>
-                <form method="POST" action="novocliente.php">
+                <form method="GET" action="novocliente.php">
                     <div class="container">
                         <div style="display: flex; justify-content: space-between">
                             <div class="form-group">
@@ -41,7 +41,7 @@
                                 <input type="text" class="form-control form-control-sm" name = "cep">
                             </div>
                             <div class="form-group">
-                                <label for="endereco">Endereço::</label>
+                                <label for="endereco">Endereço:</label>
                                 <input type="text" class="form-control form-control-sm" name = "endereco">
                             </div>
                         </div>

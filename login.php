@@ -13,7 +13,7 @@
         <div class = 'container' id = "formlogin">
             <center>
                 <h2>Faça seu login</h2>
-                <form action="/action_page.php">
+                <form metho="GET" action="logindata.php">
                     <label for="usuario">Usuário:</label>
                     <input type="text" class="form-control" placeholder="Usuário" name="usuario" required>
                     <label for="senha">Senha:</label>
