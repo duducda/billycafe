@@ -1,0 +1,19 @@
+<?php
+    $host = 'localhost';
+    $user = 'root';
+    $senhaSQL = '';
+    $db = "billy";
+
+    //Conexão com o banco de dados
+    $connect = mysqli_connect($host, $user, $senhaSQL, $db);
+
+    //Coleta dos dados do formulário
+    $cliente = $_GET['cliente'];
+    $total = $_GET['total'];
+    $itens = $_COOKIE['shopping_cart'];
+
+    //Query para a database
+
+    $sql = "INSERT INTO compra (cliente, total, itens) VALUES ('$cliente','$total', '$itens')";
+
+?>

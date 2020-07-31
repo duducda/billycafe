@@ -39,8 +39,8 @@
                   <tr>
                      <td><?php echo $values["item_name"]; ?></td>
                      <td><?php echo $values["item_quantity"]; ?></td>
-                     <td>$ <?php echo $values["item_price"]; ?></td>
-                     <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+                     <td>R$ <?php echo $values["item_price"]; ?></td>
+                     <td>R$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
                      <td><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remover</span></a></td>
                   </tr>
                   <?php 
@@ -49,7 +49,7 @@
             ?>
             <tr>
                <td colspan="3" align="right">Total</td>
-               <td align="right">$ <?php echo number_format($total, 2); ?></td>
+               <td align="right">R$ <?php echo number_format($total, 2); ?></td>
                <td></td>
             </tr>
             <?php
@@ -66,5 +66,23 @@
          </table>
          <br/>
       </carrinho>
+      <?php include 'modal.php'; ?>
+      <form method="GET" action="compra.php">
+         <input type="hidden" name="cliente" value="<?php echo $_SESSION['cliente']?>" />
+         <input type="hidden" name="total" value="<?php echo $total;?>" />
+
+         <?php
+                if(isset($_SESSION['cliente'])){
+                ?>
+                    <button type="submit" class="btn btn-light" >Comprar</button>
+            <?php
+                }
+                else{
+                ?>
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Comprar</button>
+                <?php
+                }
+                ?>     
+      </form>
    </body>
 </html>

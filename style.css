@@ -4,11 +4,9 @@ body{
     background-color: rgb(175, 127, 102);
 }
 
-#conteudo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 7%;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 #cart{
