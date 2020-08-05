@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <!-- The Modal -->
-  <div class="modal fade" id="myModal">
+  <div class="modal fade" id="modalFalha">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
       
@@ -12,19 +12,24 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-         Você precisa realizar o login para finalizar a compra!
+          Você precisa realizar o login para finalizar a compra!
         </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalSucesso">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <!-- Modal body -->
+        <div class="modal-body">
+          Compra realizada com sucesso!
+        </div>        
       </div>
     </div>
   </div>
   
-</div>
+
 
 </body>
 </html>

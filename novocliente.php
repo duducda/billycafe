@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     $host = 'localhost';
     $user = 'root';
@@ -16,10 +17,13 @@
     $cep = $_GET['cep'];
     $endereco = $_GET['endereco'];
 
-
     //Query para a database
     $sql = "INSERT INTO cliente (nome, email, usuario, senha, cep, endereco) VALUES ('$nome','$email', '$usuario', '$senha','$endereco', '$cep')";
     $result = mysqli_query($connect, $sql);
 
-    echo "Cadastro realizado com sucesso"
+    $sql = "SELECT nome FROM cliente WHERE usuario = '$usuario'";
+    $result = mysqli_query($connect, $sql);
+    $nomecliente = mysqli_fetch_array($result);
+    $_SESSION['cliente'] = $nomecliente['nome'];    
+    header('Location: index.php'); 
 ?>

@@ -71,3 +71,9 @@ header{
     background-color:rgb(186, 164, 160);
     border-radius: 10px;
 }
+
+#compraefetuada{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}

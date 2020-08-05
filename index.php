@@ -28,12 +28,12 @@
                   <h4 class="text-info"><?php echo $row["nome"]; ?></h4>
 
                   <h4 class="text-danger">R$ <?php echo $row["valor"]; ?></h4>
-                  <input type="hidden" name="hidden_name" value="<?php echo $row["nome"]; ?>" />
-                  <input type="hidden" name="hidden_price" value="<?php echo $row["valor"]; ?>" />
+                  <input type="hidden" name="hidden_nome" value="<?php echo $row["nome"]; ?>" />
+                  <input type="hidden" name="hidden_valor" value="<?php echo $row["valor"]; ?>" />
                   <input type="hidden" name="hidden_id" value="<?php echo $row["id"]; ?>" />
                   <div style="display: flex;flex-direction: row; justify-content:space-between">
-                     <input type="number" id="quantity" name="quantity" min="1" max="16" size="3" value="1">
-                     <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-primary" value="Adicionar carrinho" />
+                     <input type="number" id="quantity" name="quantidade" min="1" max="16" size="3" value="1">
+                     <input type="submit" name="adicionar" style="margin-top:5px;" class="btn btn-primary" value="Adicionar carrinho" />
                   </div>
                </div>
                </form>

@@ -28,23 +28,23 @@
                <th width="15%">Total</th>
             </tr>
             <?php
-               if(isset($_COOKIE["shopping_cart"]))
+               if(isset($_COOKIE["carrinho"]))
                {
                $total = 0;
-               $cookie_data = stripslashes($_COOKIE['shopping_cart']);
+               $cookie_data = stripslashes($_COOKIE['carrinho']);
                $cart_data = json_decode($cookie_data, true);
                foreach($cart_data as $keys => $values)
                {
             ?>
                   <tr>
-                     <td><?php echo $values["item_name"]; ?></td>
-                     <td><?php echo $values["item_quantity"]; ?></td>
-                     <td>R$ <?php echo $values["item_price"]; ?></td>
-                     <td>R$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+                     <td><?php echo $values["item_nome"]; ?></td>
+                     <td><?php echo $values["item_quantidade"]; ?></td>
+                     <td>R$ <?php echo $values["item_valor"]; ?></td>
+                     <td>R$ <?php echo number_format($values["item_quantidade"] * $values["item_valor"], 2);?></td>
                      <td><a href="cart.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remover</span></a></td>
                   </tr>
                   <?php 
-                     $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                     $total = $total + ($values["item_quantidade"] * $values["item_valor"]);
                }
             ?>
             <tr>
@@ -74,12 +74,12 @@
          <?php
                 if(isset($_SESSION['cliente'])){
                 ?>
-                    <button type="submit" class="btn btn-light" >Comprar</button>
+                    <button type="submit" class="btn btn-light">Comprar</button>
             <?php
                 }
                 else{
                 ?>
-                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal">Comprar</button>
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalFalha">Comprar</button>
                 <?php
                 }
                 ?>     
